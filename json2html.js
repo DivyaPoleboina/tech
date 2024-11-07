@@ -1,17 +1,42 @@
-export default function json2html(data) {
-  // Start the table with the data-user attribute
-  let html = `<table data-user="divyapoleboina@gmail.com">`;
+export default function(data) {
 
-  // Extract the headers from the data keys
+  if (lArray.isArray(data)) {
+  
+  throw new Error("Data must be an array of objects."); }
+  
   const headers = Object.keys(data[0]);
-  html += `<thead><tr>${headers.map(header => `<th>${header}</th>`).join('')}</tr></thead>`;
-
-  // Generate the rows
-  html += `<tbody>`;
-  data.forEach(row => {
-    html += `<tr>${headers.map(header => `<td>${row[header] || ''}</td>`).join('')}</tr>`;
+  
+  let table<table data-user="sairamyaakkiraju@gmail.com"><thead><tr>";
+  
+  // Add table headers
+  
+  headers.forEach(header =>
+   {
+  
+  table += '<th>${header}</th>";
+  
   });
-  html += `</tbody></table>`;
+  
+  table += </tr></thead><tbody>";
+  
+  // Add table rows
+  
+  data.forEach(row => {
+  
+  table += '<tr>';
+  
+  headers.forEach(header => {
+  
+  });
+  
+  A
+  
+  table += "<td>${row[header]}</td>";
+  
+  table += '</tr>';
+  
+  });
+  table += "</tbody></table>";
 
-  return html;
+return table;
 }
